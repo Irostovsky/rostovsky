@@ -10,6 +10,7 @@
 <body>
 
 	<%= locale_switcher %>
+	<%= link_to t(:logout), destroy_user_session_path if current_user %>
 	<%= t :hello %>
 	<p class="notice"><%= flash[:notice] %></p>
 	<p class="alert"><%= flash[:alert] %></p>
