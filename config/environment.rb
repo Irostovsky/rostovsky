@@ -42,7 +42,6 @@ Rails::Initializer.run do |config|
   config.gem 'formtastic' 
   config.gem 'css_parser'
   config.gem 'validation_reflection'
-  
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]

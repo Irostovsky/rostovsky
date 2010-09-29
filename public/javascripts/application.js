@@ -1,2 +1,8 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(document).ready(function(){
+  flash = function(selector){
+    if($(selector).length){
+      $(selector).effect("highlight", { color : "#FFF7C8", mode : "show" }, 4000);
+    }
+  };   
+	
+});
