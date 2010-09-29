@@ -1,4 +1,10 @@
 ru:
+  
+  formtastic:
+    actions:
+      user: 
+        create: Логин
+
   devise:
     sessions:
       link: 'Sign in'

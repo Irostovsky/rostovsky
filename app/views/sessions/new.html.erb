@@ -1,0 +1,13 @@
+<% content_tag :div, :class => 'login_form' do %>
+	<%- if devise_mapping.authenticatable? %>
+	  <% semantic_form_for resource_name, resource, :url => session_path(resource_name) do |f| -%>
+			<% f.inputs :title => 'Логин' do %>
+				<%= f.input :email %>
+				<%= f.input :password %>
+				<%= f.input :remember_me, :as => :boolean %>
+				<%= f.buttons %>
+			<% end -%>
+
+	  <% end -%>
+	<% end %>
+<% end%>
