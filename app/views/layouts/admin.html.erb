@@ -1,0 +1,10 @@
+<% inside_layout 'application' do -%>
+	<%= locale_switcher %>
+	<%= link_to t(:logout), destroy_user_session_path if current_user %>
+	<%= t :hello %>
+	Admin
+	<p class="notice"><%= flash[:notice] %></p>
+	<p class="alert"><%= flash[:alert] %></p>
+
+   <%= yield %>
+<% end -%>

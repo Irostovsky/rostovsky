@@ -1,4 +1,6 @@
 class SitesController < ApplicationController
+  
+  layout 'public'
   # GET /sites
   # GET /sites.xml
   def index

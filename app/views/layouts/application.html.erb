@@ -2,23 +2,17 @@
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Rostovsky</title>
-  <%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes' %>
-</head>
-<body>
+	<head>
+	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	  <title>Rostovsky</title>
+	  <%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes' %>
+	</head>
+	<body class="<%= yield :body_class %>">
 
-	<%= locale_switcher %>
-	<%= link_to t(:logout), destroy_user_session_path if current_user %>
-	<%= t :hello %>
-	<p class="notice"><%= flash[:notice] %></p>
-	<p class="alert"><%= flash[:alert] %></p>
-
-	<%= yield %>
+		<%= yield %>
 	
-  <%= render "layouts/include_all_jquery" %>
-  <%= javascript_include_tag "application.js"%>
+	  <%= render "layouts/include_all_jquery" %>
+	  <%= javascript_include_tag "application.js"%>
 
-</body>
+	</body>
 </html>
