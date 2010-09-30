@@ -8,3 +8,5 @@ en:
         create: Login
   hello: "Hello world"
   logout: Log out
+  sites: Sites
+  new: New

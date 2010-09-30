@@ -17,5 +17,6 @@ Rails::Initializer.run do |config|
   config.gem 'css_parser'
   config.gem 'validation_reflection'
   config.gem "nested_layouts", :source => "http://gemcutter.org"
-
+  config.gem 'ryanb-acts-as-list', :lib => 'acts_as_list', :source => 'http://gems.github.com'
+  
 end
