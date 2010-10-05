@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100930152516) do
+ActiveRecord::Schema.define(:version => 20101005154900) do
+
+  create_table "site_translations", :force => true do |t|
+    t.integer  "site_id"
+    t.string   "locale"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "site_translations", ["site_id"], :name => "index_site_translations_on_site_id"
 
   create_table "sites", :force => true do |t|
     t.datetime "created_at"

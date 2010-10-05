@@ -3,7 +3,7 @@ class Admin::SitesController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @sites = Site.all
+    @sites = Site.sorted_by_position
   end
   
   def new

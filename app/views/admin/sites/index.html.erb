@@ -3,12 +3,14 @@
 <table>
 	<tr>
 		<th>URL</th>
+		<th>Description</th>
 		<th>Edit</th>
 		<th>Delete</th>
 	</tr>
 	<% @sites.each do |site| %>
 		<tr>
 			<td><%= site.url %></td>
+			<td><%= site.description %></td>
 			<td><%= link_to 'Edit', edit_admin_site_path(site) %></td>
 			<td><%= link_to 'Destroy', admin_site_path(site), :method => :delete, :confirm => 'Are you sure?' %></td>
 		</tr>
