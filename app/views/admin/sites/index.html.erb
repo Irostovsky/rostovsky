@@ -6,6 +6,7 @@
 		<th>Description</th>
 		<th>Edit</th>
 		<th>Delete</th>
+		<th>Move</th>
 	</tr>
 	<% @sites.each do |site| %>
 		<tr>
@@ -13,6 +14,10 @@
 			<td><%= site.description %></td>
 			<td><%= link_to 'Edit', edit_admin_site_path(site) %></td>
 			<td><%= link_to 'Destroy', admin_site_path(site), :method => :delete, :confirm => 'Are you sure?' %></td>
+			<td>
+				<%= link_to 'Up', admin_site_change_position_path(site, 'up'), :method => :put %>
+				<%= link_to 'Down', admin_site_change_position_path(site, 'down'), :method => :put %>
+			</td>
 		</tr>
 	<% end -%>
 </table>

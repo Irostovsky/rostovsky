@@ -6,7 +6,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.namespace :admin do |admin|
     admin.resources :home, :only => :index
-    admin.resources :sites
+    admin.resources :sites do |site|
+      site.resources :change_position, :only => :update
+    end
   end
 
   map.root :controller => "sites"
