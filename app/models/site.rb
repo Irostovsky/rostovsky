@@ -5,4 +5,6 @@ class Site < ActiveRecord::Base
   named_scope :sorted_by_position, :order => "position desc"
   translates :description
   
+  has_many :photos
+  
 end
