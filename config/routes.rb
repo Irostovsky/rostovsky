@@ -8,7 +8,9 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :home, :only => :index
     admin.resources :sites do |site|
       site.resources :change_position, :only => :update
-      site.resources :photos
+      site.resources :photos, :except => [:new] do |photo|
+        photo.resources :up_photo, :only => [:update, :destroy]
+      end
     end
   end
 

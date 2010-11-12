@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
+  acts_as_list :scope => :site_id
   
   belongs_to :site
 

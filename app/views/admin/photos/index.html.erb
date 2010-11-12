@@ -16,6 +16,10 @@
 			<td><%= photo.description %></td>
 			<td><%= link_to 'Edit', edit_admin_site_photo_path(@site, photo) %></td>
 			<td><%= link_to 'Destroy', admin_site_photo_path(@site, photo), :method => :delete, :confirm => 'Are you sure?' %></td>
+			<td>
+				<%= link_to 'Up', admin_site_photo_up_photo_path(@site, photo, 'up'), :method => :put %>
+				<%= link_to 'Down', admin_site_photo_up_photo_path(@site, photo, 'down'), :method => :delete %>
+			</td>
 		</tr>
 	<% end -%>
 </table>
