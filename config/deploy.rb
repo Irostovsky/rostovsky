@@ -17,7 +17,7 @@ role :app, "#{deploy_by_user}#{ip}"
 role :web, "#{deploy_by_user}#{ip}"
 role :db,  "#{deploy_by_user}#{ip}", :primary => true
 
-after 'deploy:symlink', 'deploy:shared_data'
+after 'deploy:symlink', 'deploy:shared_data', 'deploy:install_gems'
 
 namespace :deploy do
 
@@ -26,6 +26,10 @@ namespace :deploy do
     run "mkdir -p #{shared_avatars_dir}" # make dir if it doesn't exist
     run "chown  -R www-data #{shared_avatars_dir}"
     run "ln -s #{shared_avatars_dir} #{current_path}/public/assets"
+  end
+
+  task :install_gems do
+    run "cd #{release_path} && /var/lib/gems/1.8/bin/rake gems:install"
   end
 
   task :restart, :roles => :app do
