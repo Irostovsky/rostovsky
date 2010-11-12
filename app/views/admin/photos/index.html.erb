@@ -15,6 +15,7 @@
 			<td><%= image_tag(photo.avatar.url(:thumb)) %></td>
 			<td><%= photo.description %></td>
 			<td><%= link_to 'Edit', edit_admin_site_photo_path(@site, photo) %></td>
+			<td><%= link_to 'Destroy', admin_site_photo_path(@site, photo), :method => :delete, :confirm => 'Are you sure?' %></td>
 		</tr>
 	<% end -%>
 </table>

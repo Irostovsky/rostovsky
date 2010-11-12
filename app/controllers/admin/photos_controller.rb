@@ -30,6 +30,12 @@ class Admin::PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    photo = @site.photos.find(params[:id])
+    photo.destroy
+    redirect_to admin_site_photos_path(@site), :notice => 'Photo was successfully deleted.'
+  end
+
   private
   
   def find_site
