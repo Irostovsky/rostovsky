@@ -1,0 +1,28 @@
+<h2>Photos for <%= @site.url %></h2>
+
+<% content_tag :div, :class => 'new_photo_form' do %>
+	<% semantic_form_for [:admin, @site, @photo], :html => { :multipart => true }  do |f| %>
+		<%= f.error_messages %>
+		<% f.inputs :title => 'New photo' do %>
+			<%= f.input :description  %>
+			<%= f.input :avatar  %>
+			<%= f.buttons %>
+		<% end -%>
+	<% end -%>
+<% end -%>
+
+<table>
+	<tr>
+		<th>Image</th>
+		<th>Description</th>
+		<th>Edit</th>
+		<th>Delete</th>
+		<th>Move</th>
+	</tr>
+	<% @photos.each do |photo| %>
+		<tr>
+			<td><%= image_tag(photo.avatar.url(:thumb)) %></td>
+			<td><%= photo.description %></td>
+		</tr>
+	<% end -%>
+</table>

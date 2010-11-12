@@ -18,5 +18,6 @@ Rails::Initializer.run do |config|
   config.gem 'validation_reflection'
   config.gem "nested_layouts", :source => "http://gemcutter.org"
   config.gem 'ryanb-acts-as-list', :lib => 'acts_as_list', :source => 'http://gems.github.com'
+  config.gem 'paperclip', :version => '~> 2.3.3', :source => 'http://rubygems.org'
   
 end
