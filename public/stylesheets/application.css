@@ -52,6 +52,11 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+.notice{
+	background-color: #B3EC7A;
+	display: inline-block;
+}
+
 .login_form{
 	width: 350px;
 }
@@ -59,3 +64,4 @@ a:hover { color: #fff; background-color:#000; }
 .new_photo_form{
 	width: 700px;
 }
+

@@ -4,8 +4,10 @@
 	<%= link_to t(:sites), admin_sites_path %>
 	<%= link_to t(:logout), destroy_user_session_path if current_user %>
 
-	<p class="notice"><%= flash[:notice] %></p>
-	<p class="alert"><%= flash[:alert] %></p>
+	<div>
+		<p class="notice"><%= flash[:notice] %></p>
+		<p class="alert"><%= flash[:alert] %></p>
+	</div>
 
    <%= yield %>
 <% end -%>
