@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101116174811) do
+ActiveRecord::Schema.define(:version => 20101116175557) do
 
   create_table "photo_translations", :force => true do |t|
     t.integer  "photo_id"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20101116174811) do
     t.text     "description"
     t.integer  "position"
     t.string   "title"
+    t.boolean  "hidden"
+    t.boolean  "active"
   end
 
   create_table "users", :force => true do |t|
