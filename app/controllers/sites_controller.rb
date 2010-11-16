@@ -6,5 +6,9 @@ class SitesController < ApplicationController
     @sites = Site.active
   end
 
+  def show
+    @site = Site.find_by_id(params[:id], :include => :photos)
+  end
+  
 
 end

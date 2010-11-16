@@ -6,4 +6,8 @@ module ApplicationHelper
     link_to data[0], locale_path(data[1]), :method => :put
   end
   
+  def url_with_http(url)
+    "http://" << url
+  end
+  
 end

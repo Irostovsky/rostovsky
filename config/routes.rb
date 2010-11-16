@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :sites
+  map.resources :sites, :only => [:index, :show]
   map.resources :locales, :only => :update
   
   map.devise_for :users

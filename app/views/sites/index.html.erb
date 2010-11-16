@@ -1,9 +1,9 @@
 <div class='public_sites'>
 	<% @sites.each do |site| %>
 		<div class='public_site'>
-			<%= link_to image_tag(site.photos.first.avatar(:medium)), '#' %>
+			<%= link_to image_tag(site.photos.first.avatar(:medium)), site_path(site) %>
 			<%= link_to site.title %>
-			<%= link_to site.url, "http://" << site.url, :popup => true %>
+			<%= link_to site.url, url_with_http(site.url), :popup => true %>
 		</div>
 	<% end -%>
 </div>
