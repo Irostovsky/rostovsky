@@ -1,4 +1,12 @@
 <div><%= link_to @site.url, url_with_http(@site.url), :popup => true %></div>
 <div><%= @site.title %></div>
 <div><%= @site.description %></div>
+
+<div id="site_gallery" class="spacegallery">
+	<% @site.photos.each do |photo| %>
+		<%= image_tag photo.avatar(:big) %>
+	<% end -%>
+</div>
+
+
 <%= link_to 'Back', sites_path %>
