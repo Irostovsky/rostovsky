@@ -3,6 +3,7 @@
 <table>
 	<tr>
 		<th>URL</th>
+		<th>Title</th>
 		<th>Description</th>
 		<th>Photos</th>
 		<th>Edit</th>
@@ -12,6 +13,7 @@
 	<% @sites.each do |site| %>
 		<tr>
 			<td><%= site.url %></td>
+			<td><%= site.title %></td>
 			<td><%= site.description %></td>
 			<td><%= link_to 'Photos', admin_site_photos_path(site) %></td>
 			<td><%= link_to 'Edit', edit_admin_site_path(site) %></td>

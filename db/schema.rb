@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101112172854) do
+ActiveRecord::Schema.define(:version => 20101116174811) do
+
+  create_table "photo_translations", :force => true do |t|
+    t.integer  "photo_id"
+    t.string   "locale"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "photo_translations", ["photo_id"], :name => "index_photo_translations_on_photo_id"
 
   create_table "photos", :force => true do |t|
     t.text     "description"
@@ -29,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20101112172854) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "site_translations", ["site_id"], :name => "index_site_translations_on_site_id"
@@ -39,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20101112172854) do
     t.string   "url"
     t.text     "description"
     t.integer  "position"
+    t.string   "title"
   end
 
   create_table "users", :force => true do |t|

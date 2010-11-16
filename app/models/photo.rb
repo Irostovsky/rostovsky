@@ -4,7 +4,7 @@ class Photo < ActiveRecord::Base
   belongs_to :site
 
   has_attached_file :avatar, 
-  :styles => { :thumb => "100x100>", :medium => '300x300>', :big => '600x600>' },
+  :styles => { :thumb => "x100>", :medium => 'x300>', :big => 'x600>' },
                   :url  => "/assets/sites/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/sites/:id/:style/:basename.:extension"
 
@@ -13,5 +13,6 @@ class Photo < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif'], :message => 'должно быть одним из перечисленных типов: jpg, png, gif'
   
   validates_presence_of :description, :avatar
+   translates :description
 
 end
