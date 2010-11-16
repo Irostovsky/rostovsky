@@ -3,7 +3,7 @@ class SitesController < ApplicationController
   layout 'public'
 
   def index
-    @sites = Site.all
+    @sites = Site.active
   end
 
 

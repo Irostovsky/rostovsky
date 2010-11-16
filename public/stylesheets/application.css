@@ -13,8 +13,8 @@ pre {
 }
 
 a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+.admin a:visited { color: #666; }
+.admin a:hover { color: #fff; background-color:#000; }
 
 .fieldWithErrors {
   padding: 2px;
@@ -67,4 +67,13 @@ a:hover { color: #fff; background-color:#000; }
 
 #new_site{
 	width: 700px;
+}
+
+.public_sites .public_site{
+	display: inline-block;
+	height: 350px;
+	width: 400px;
+}
+.public_sites .public_site a{
+	display: block;
 }

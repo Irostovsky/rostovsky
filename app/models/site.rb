@@ -6,5 +6,6 @@ class Site < ActiveRecord::Base
   translates :description, :title
   
   has_many :photos, :dependent => :destroy, :order => 'position'
+  named_scope :active, :conditions => {:active => true}, :order => 'position'
   
 end
