@@ -4,7 +4,7 @@ class Photo < ActiveRecord::Base
   belongs_to :site
 
   has_attached_file :avatar, 
-  :styles => { :thumb => "x100>", :medium => 'x200>', :big => 'x600>' },
+  :styles => { :thumb => "x100>", :medium => 'x200>', :big => 'x450>' },
                   :url  => "/assets/sites/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/sites/:id/:style/:basename.:extension"
 
