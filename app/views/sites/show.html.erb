@@ -3,7 +3,7 @@
 <div><%= @site.description %></div>
 
 <div id="site_gallery" class="spacegallery">
-	<% @site.photos.each do |photo| %>
+	<% @photos.each do |photo| %>
 		<%= image_tag photo.avatar(:big) %>
 	<% end -%>
 </div>

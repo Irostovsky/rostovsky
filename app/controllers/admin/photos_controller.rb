@@ -43,6 +43,6 @@ class Admin::PhotosController < ApplicationController
   end
   
   def load_photos
-    @photos = @site.photos
+    @photos = @site.photos.sorted_admin
   end
 end

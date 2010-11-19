@@ -5,9 +5,9 @@ class Admin::ChangePositionController < ApplicationController
   def update
     site = Site.find(params[:site_id])
     if params[:id] == 'up'
-      site.move_lower
-    else
       site.move_higher
+    else
+      site.move_lower
     end
 
     redirect_to(admin_sites_path, :notice => 'Site position was successfully changed.')
