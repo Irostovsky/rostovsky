@@ -6,6 +6,7 @@ class Site < ActiveRecord::Base
   translates :description, :title
   
   has_many :photos, :dependent => :destroy
-  named_scope :active, :conditions => {:active => true}, :include => :photos
+  has_many :sorted_for_gallery_photos, :class_name => 'Photo', :order => 'position desc'
+  named_scope :active, :conditions => {:active => true}, :include => :sorted_for_gallery_photos
   
 end

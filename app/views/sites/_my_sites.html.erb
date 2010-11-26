@@ -5,7 +5,7 @@
 			<%= content_tag :div, site.title %>
 			<% single_line_container do %>
 				<div class="site_gallery spacegallery">
-					<% site.photos.each do |photo| %>
+					<% site.sorted_for_gallery_photos.each do |photo| %>
 						<%= image_tag photo.avatar(:big) %>
 					<% end -%>
 				</div>
