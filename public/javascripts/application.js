@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('#site_gallery').spacegallery({
 		loadingClass: 'loading',
 		border: 5, // border arround the image
-		perspective: 100 // perpective height
+		perspective: 50 // perpective height
 	});
 	
 });

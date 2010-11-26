@@ -52,6 +52,14 @@ a { color: #000; }
   list-style: square;
 }
 
+.reset_float {
+  clear: both;
+}
+
+.single_line_container > * {
+  float: left;
+}
+
 .notice{
 	background-color: #B3EC7A;
 	display: inline-block;
@@ -69,19 +77,15 @@ a { color: #000; }
 	width: 700px;
 }
 
-.public_sites .public_site{
-	display: inline-block;
-	height: 350px;
-	width: 400px;
-}
 .public_sites .public_site a{
 	display: block;
 }
 
 #site_gallery {
-	width: 100%;
-	height: 600px;
+	width: 60%;
+	height: 420px;
 }
+
 #site_gallery img {
 	border: 2px solid #52697E;
 }

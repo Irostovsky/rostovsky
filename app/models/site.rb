@@ -6,7 +6,6 @@ class Site < ActiveRecord::Base
   translates :description, :title
   
   has_many :photos, :dependent => :destroy
-  named_scope :active, :conditions => {:active => true}
-  named_scope :with_photos, :joins => 'right join photos on photos.site_id = sites.id', :group => 'sites.id'
+  named_scope :active, :conditions => {:active => true}, :include => :photos
   
 end

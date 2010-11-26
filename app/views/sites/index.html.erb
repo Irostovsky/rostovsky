@@ -1,9 +1,17 @@
 <div class='public_sites'>
 	<% @sites.each do |site| %>
 		<div class='public_site'>
-			<%= link_to image_tag(site.photos.first.avatar(:medium)), site_path(site) %>
-			<%= link_to site.title, site_path(site) %>
 			<%= link_to site.url, url_with_http(site.url), :popup => true %>
+			<%= content_tag :div, site.title %>
+			<% single_line_container do %>
+				<div id="site_gallery" class="spacegallery">
+					<% site.photos.each do |photo| %>
+						<%= image_tag photo.avatar(:big) %>
+					<% end -%>
+				</div>
+				<%= site.description %>
+			<% end -%>
+			
 		</div>
 	<% end -%>
 </div>

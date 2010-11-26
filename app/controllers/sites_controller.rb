@@ -3,7 +3,7 @@ class SitesController < ApplicationController
   layout 'public'
 
   def index
-    @sites = Site.active.with_photos.sorted_by_position
+    @sites = Site.active.sorted_by_position
   end
 
   def show
