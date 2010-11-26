@@ -5,7 +5,7 @@
 	<head>
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	  <title>Rostovsky</title>
-	  <%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes', 'spacegallery' %>
+	  <%= stylesheet_link_tag 'application', 'formtastic', 'formtastic_changes', 'spacegallery', "jquery-ui-1.8.6.custom" %>
 	</head>
 	<body class="<%= yield :body_class %>">
 
@@ -13,6 +13,7 @@
 	
 	  <%= render "layouts/include_all_jquery" %>
 	  <%= javascript_include_tag "application.js"%>
+	
 
 	</body>
 </html>
