@@ -81,12 +81,12 @@ a { color: #000; }
 	display: block;
 }
 
-#site_gallery {
+.site_gallery {
 	width: 60%;
 	height: 420px;
 }
 
-#site_gallery img {
+.site_gallery img {
 	border: 2px solid #52697E;
 }
 

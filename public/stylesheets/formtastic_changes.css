@@ -20,5 +20,6 @@ form.formtastic fieldset > ol > li.string input {
 }
 
 form.formtastic textarea{
-	height: 70px;
+	height: 400px;
+	width: 400px;
 }

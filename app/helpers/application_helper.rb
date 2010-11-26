@@ -21,4 +21,7 @@ module ApplicationHelper
     concat reset_float
   end
   
+  def textilize text
+    RedCloth.new(text).to_html
+  end
 end
