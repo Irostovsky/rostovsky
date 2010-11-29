@@ -1,14 +1,17 @@
-<div><%= link_to @site.url, url_with_http(@site.url), :popup => true %></div>
-<div><%= @site.title %></div>
+<div id="tabs">
+    <ul>
+        <li><a href="#my_sites"><span>Мои работы</span></a></li>
+        <li><a href="#prices"><span>Услуги и цены</span></a></li>
+        <li><a href="#contacts"><span>Контакты</span></a></li>
+    </ul>
+    <div id="my_sites">
+			<%= render :partial => 'site_gallery' %>
+    </div>
+    <div id="prices">
+			Услуги и цены
+    </div>
+    <div id="contacts">
+			Контакты
+    </div>
+</div>
 
-<% single_line_container do %>
-	<div class="site_gallery spacegallery">
-		<% @photos.each do |photo| %>
-			<%= image_tag photo.avatar(:big) %>
-		<% end -%>
-	</div>
-	<%= content_tag :div, textilize(@site.description) %>
-<% end -%>
-
-
-<%= link_to 'Back', sites_path %>
