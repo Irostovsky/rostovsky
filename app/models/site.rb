@@ -8,5 +8,6 @@ class Site < ActiveRecord::Base
   has_many :photos, :dependent => :destroy
   has_many :sorted_for_gallery_photos, :class_name => 'Photo', :order => 'position desc'
   named_scope :active, :conditions => {:active => true}, :include => :sorted_for_gallery_photos
+  named_scope :with_photos, :joins => 'right join photos on photos.site_id = sites.id', :group => 'sites.id'
   
 end
