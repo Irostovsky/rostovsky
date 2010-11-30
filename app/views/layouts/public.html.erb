@@ -12,9 +12,9 @@
 	
 	<div id="tabs">
 	    <ul>
-	        <li><a href="#my_sites"><span>Мои работы</span></a></li>
-	        <li><a href="#prices"><span>Услуги и цены</span></a></li>
-	        <li><a href="#contacts"><span>Контакты</span></a></li>
+	        <li class='my_sites'><a href="#my_sites"><span>Мои работы</span></a></li>
+	        <li class='prices'><a href="#prices"><span>Услуги и цены</span></a></li>
+	        <li class='contacts'><a href="#contacts"><span>Контакты</span></a></li>
 	    </ul>
 	    <div id="my_sites">
 		   <%= yield %>
@@ -26,5 +26,5 @@
 				Контакты
 	    </div>
 	</div>
-
+	<%= content_tag :div, '&copy; 2010 capricho', :class => 'footer' %>
 <% end -%>

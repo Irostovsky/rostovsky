@@ -136,3 +136,66 @@ body{
 	font-family: Microsoft Sans Serif;
 }
 
+.footer{
+	margin: 30px 0;
+	text-align: center;
+}
+
+#tabs{
+	margin: 20px 0;
+}
+
+/************************************************tabs*/
+.ui-widget-content{
+	background: none;
+	border: 0;
+}
+
+.ui-tabs{
+	padding: 0;
+}
+
+.ui-widget-header{
+	background: none;
+	border: none;
+}
+
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
+	background: none;
+}
+
+.ui-corner-top {
+	-moz-border-radius-topleft: 40px;
+	-moz-border-radius-topright: 40px;
+}
+
+.ui-tabs .ui-tabs-nav {
+	padding-left: 14em;
+}
+
+.ui-tabs-nav{
+	font-size: 24px;
+	color: #000;
+}
+
+#tabs .ui-state-default, 
+#tabs .ui-widget-content .ui-state-default, 
+#tabs .ui-widget-header .ui-state-default{
+  border: none;
+	background-color: white;
+}
+
+#tabs .ui-widget-header .my_sites,
+#my_sites{
+	background-color: #D0E7FF;
+}
+
+#tabs .ui-widget-header .prices, #prices{
+	background-color: #F3D3FA;
+}
+
+#tabs .ui-widget-header .contacts, #contacts{
+	background-color: #CDFED3;
+}
+
