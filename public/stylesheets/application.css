@@ -107,6 +107,7 @@ a.loading {
 	background-image: url(/images/logo.png);
 	width: 290px;
 	height: 165px;
+	margin: 30px 50px;
 }
 
 .slogan {
@@ -131,7 +132,7 @@ a.loading {
 
 
 body{
-	min-width: 1024px;
+	min-width: 1124px;
 	font-family: Microsoft Sans Serif;
 }
 
