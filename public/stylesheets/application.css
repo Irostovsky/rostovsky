@@ -199,3 +199,14 @@ body{
 	background-color: #CDFED3;
 }
 
+.ui-tabs .ui-tabs-nav li a {
+  padding: 0.1em 1.5em;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: #50187C;
+}
+  
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #890981;
+}  
