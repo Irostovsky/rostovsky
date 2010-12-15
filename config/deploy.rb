@@ -26,6 +26,8 @@ namespace :deploy do
     run "mkdir -p #{shared_avatars_dir}" # make dir if it doesn't exist
     run "chown  -R www-data #{shared_avatars_dir}"
     run "ln -s #{shared_avatars_dir} #{current_path}/public/assets"
+    
+    run "ln -s '#{shared_path}/s3.yml' '#{current_path}/config/s3.yml'"
   end
 
   task :install_gems do

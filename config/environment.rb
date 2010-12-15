@@ -21,4 +21,7 @@ Rails::Initializer.run do |config|
   config.gem 'paperclip', :version => '~> 2.3.3', :source => 'http://rubygems.org'
   config.gem 'RedCloth', :version => '~> 4.2.3', :source => 'http://rubygems.org'
   
+  S3_BUCKET = 'rostovsky'
+  S3_ROOT_FOLDER = 'production'
+  
 end

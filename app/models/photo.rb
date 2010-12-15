@@ -6,8 +6,11 @@ class Photo < ActiveRecord::Base
   has_attached_file :avatar, 
   :styles => { :thumb => "x100>", :medium => 'x200>', :big => 'x350>' },
                   :url  => "/assets/sites/:id/:style/:basename.:extension",
-                  :path => ":rails_root/public/assets/sites/:id/:style/:basename.:extension",
-                  :default_url => "/images/default_site_photo.png"
+                  :path => "#{S3_ROOT_FOLDER}/assets/sites/:id/:style/:basename.:extension",
+                  :default_url => "/images/default_site_photo.png",
+                  :storage => :s3,
+                  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                  :bucket => S3_BUCKET
 
   validates_attachment_presence :avatar, :message => 'не может иметь пустое значение'
   validates_attachment_size :avatar, :less_than => 5.megabytes
