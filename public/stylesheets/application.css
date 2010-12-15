@@ -5,9 +5,8 @@ body {
 }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Microsoft Sans Serif;
   font-size:   13px;
-  line-height: 18px;
 }
 
 pre {
@@ -83,11 +82,20 @@ a { color: #000; }
 
 .public_sites .public_site{
 	display: inline-block;
-	margin: 10px;
+	margin: 1em;
 }
 
 .public_sites .public_site a{
-	display: block;
+  display: block;
+  font-size: 1.7em
+}
+
+.public_sites .public_site div{
+  font-size: 1.3em
+}
+
+.public_sites .public_site .site_main_photo{
+  margin-top: 0.8em;
 }
 
 .site_gallery {
@@ -186,6 +194,10 @@ body{
 	background-color: white;
 }
 
+#tabs a{
+  color: #000;
+}
+
 #tabs .ui-widget-header .my_sites,
 #my_sites{
 	background-color: #D0E7FF;
@@ -210,3 +222,7 @@ body{
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
     color: #890981;
 }  
+
+.ui-widget-content{
+  color: #000;
+}
