@@ -1,4 +1,7 @@
-<div><%= link_to @site.url, url_with_http(@site.url), :popup => true %></div>
+<div>
+  <%= link_to 'Мои работы', root_url %>
+  <%= link_to @site.url, url_with_http(@site.url), :popup => true %>
+  </div>
 <div><%= @site.title %></div>
 
 <% single_line_container do %>

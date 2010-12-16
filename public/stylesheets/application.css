@@ -6,7 +6,7 @@ body {
 
 body, p, ol, ul, td {
   font-family: Microsoft Sans Serif;
-  font-size:   13px;
+  font-size: 1em;
 }
 
 pre {
@@ -101,6 +101,7 @@ a { color: #000; }
 .site_gallery {
 	width: 60%;
 	height: 420px;
+	margin: 2em 2em 1em 1em;
 }
 
 .site_gallery img {
@@ -151,6 +152,20 @@ body{
 
 #tabs{
 	margin: 20px 0;
+	font-family: Microsoft Sans Serif;
+}
+/*********************singlre site*****************************/
+
+.single_site .breadcrumbs{
+  font-size: 1.5em;
+}
+
+.single_site .breadcrumbs a{
+  text-decoration: none;
+}
+
+.single_site #description{
+  font-size: 1.2em;
 }
 
 /************************************************tabs*/
@@ -168,7 +183,6 @@ body{
 	border: none;
 }
 
-
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
 	background: none;
 }
@@ -179,11 +193,11 @@ body{
 }
 
 .ui-tabs .ui-tabs-nav {
-	padding-left: 14em;
+	padding-left: 8em;
 }
 
 .ui-tabs-nav{
-	font-size: 24px;
+	font-size: 1.7em;
 	color: #000;
 }
 
@@ -225,4 +239,7 @@ body{
 
 .ui-widget-content{
   color: #000;
+}
+#tabs .my_sites, #tabs .prices, #tabs .contacts{
+  font-weight: normal;
 }

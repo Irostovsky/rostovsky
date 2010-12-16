@@ -1,2 +1,19 @@
-<%= render :partial => 'site_gallery' %>
+<div class='single_site'>
+  
+  <div class='breadcrumbs'>
+    <%= link_to 'Мои работы', root_url %>
+    <%= ' » ' %>
+    <%= link_to @site.url, url_with_http(@site.url), :popup => true %>
+  </div>
 
+  <% single_line_container do %>
+  	<div class="site_gallery spacegallery">
+  		<% @photos.each do |photo| %>
+  			<%= image_tag photo.avatar(:big) %>
+  		<% end -%>
+  	</div>
+  	<%= content_tag :div, textilize(@site.description), :id => 'description' %>
+  <% end -%>
+
+
+</div>
