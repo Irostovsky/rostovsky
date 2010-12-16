@@ -157,13 +157,17 @@ body{
 }
 
 .footer{
-	margin: 30px 0;
+  margin-top: 30px;
 	text-align: center;
 }
 
 #tabs{
-	margin: 20px 0;
+	margin: 20px 0 0 0;
 	font-family: Microsoft Sans Serif;
+}
+
+#tabs > div > div:first-child {
+  min-height: 300px;
 }
 /*********************singlre site*****************************/
 
@@ -251,6 +255,7 @@ body{
 .ui-widget-content{
   color: #000;
 }
+
 #tabs .my_sites, #tabs .prices, #tabs .contacts{
   font-weight: normal;
 }
