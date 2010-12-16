@@ -82,16 +82,17 @@ a { color: #000; }
 
 .public_sites .public_site{
 	display: inline-block;
-	margin: 1em;
+	margin-top: 1em;
+	margin-right: 3em;
 }
 
 .public_sites .public_site a{
   display: block;
-  font-size: 1.7em
+  font-size: 1.5em
 }
 
 .public_sites .public_site div{
-  font-size: 1.3em
+  font-size: 1.2em
 }
 
 .public_sites .public_site .site_main_photo{
