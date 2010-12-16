@@ -15,6 +15,10 @@ pre {
   font-size: 11px;
 }
 
+.invisible{
+  display: none;
+}
+
 a { color: #000; }
 .admin a:visited { color: #666; }
 .admin a:hover { color: #fff; background-color:#000; }

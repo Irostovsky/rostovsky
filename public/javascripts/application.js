@@ -11,6 +11,6 @@ $(document).ready(function(){
 		perspective: 50 // perpective height
 	});
 	
-	$("#tabs").tabs();
+	$("#tabs").tabs().toggleClass('invisible');
 	
 });
