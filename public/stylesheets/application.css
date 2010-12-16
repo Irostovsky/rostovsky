@@ -124,10 +124,12 @@ a.loading {
 }
 /***************************public design****************************************/
 .logo {
-	background-image: url(/images/logo.png);
+	background-image: url(/images/logo-new-year.png);
+/*  background-image: url(/images/logo.png);*/
 	width: 290px;
 	height: 165px;
 	margin: 30px 50px;
+	margin-bottom: 10px;
 }
 
 .slogan {
@@ -162,7 +164,7 @@ body{
 }
 
 #tabs{
-	margin: 20px 0 0 0;
+	margin: 10px 0 0 0;
 	font-family: Microsoft Sans Serif;
 }
 
@@ -208,7 +210,7 @@ body{
 }
 
 .ui-tabs .ui-tabs-nav {
-	padding-left: 8em;
+	padding-left: 11em;
 }
 
 .ui-tabs-nav{
