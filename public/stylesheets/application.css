@@ -19,7 +19,11 @@ pre {
   display: none;
 }
 
-a { color: #000; }
+a { 
+  color: #000; 
+  outline: none;
+}
+
 .admin a:visited { color: #666; }
 .admin a:hover { color: #fff; background-color:#000; }
 
