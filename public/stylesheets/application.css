@@ -67,6 +67,10 @@ a { color: #000; }
   float: left;
 }
 
+.header, #tabs {
+  background-color: #fff;
+}
+
 .notice{
 	background-color: #B3EC7A;
 	display: inline-block;
@@ -164,13 +168,10 @@ body{
 }
 
 #tabs{
-	margin: 10px 0 0 0;
+	padding-top: 1em;
 	font-family: Microsoft Sans Serif;
 }
 
-#tabs > div > div:first-child {
-  min-height: 300px;
-}
 /*********************singlre site*****************************/
 
 .single_site .breadcrumbs{

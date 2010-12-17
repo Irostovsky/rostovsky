@@ -1,14 +1,15 @@
 <% inside_layout 'application' do -%>
-	<% single_line_container do %>
-		<%= link_to '', root_path, :class => 'logo' %>
-		<% content_tag :div, :class => 'slogan' do %>
-			<% content_tag :div, :class => 'text'  do %>
-				<%= content_tag :div, "Создай&nbsp;свой&nbsp;мир&nbsp;- просто&nbsp;чуточку&nbsp;побудь&nbsp;богом..." %>
-				<%= image_tag 'signature.png' %>
-			<% end -%>
-			 
-		<% end -%>
-	<% end -%>
+  <div class = 'header'>
+  	<% single_line_container do %>
+  		<%= link_to '', root_path, :class => 'logo' %>
+  		<% content_tag :div, :class => 'slogan' do %>
+  			<% content_tag :div, :class => 'text'  do %>
+  				<%= content_tag :div, "Создай&nbsp;свой&nbsp;мир&nbsp;- просто&nbsp;чуточку&nbsp;побудь&nbsp;богом..." %>
+  				<%= image_tag 'signature.png' %>
+  			<% end -%>
+  		<% end -%>
+  	<% end -%>
+  </div>
 	
 	<div id="tabs" class='invisible'>
 	    <ul>
@@ -17,20 +18,14 @@
 	        <li class='contacts'><a href="#contacts"><span>Контакты</span></a></li>
 	    </ul>
 	    <div id="my_sites">
-		    <div><%= yield %></div>
-      	<%= render :partial => '/layouts/copyright' %>
+		    <%= yield %>
 	    </div>
 	    <div id="prices">
-	      <div>
-  				<%= render :partial => '/layouts/prices' %>
-	      </div>
-      	<%= render :partial => '/layouts/copyright' %>
+  			<%= render :partial => '/layouts/prices' %>
 	    </div>
 	    <div id="contacts">
-	      <div>
-  				<%= render :partial => '/layouts/contacts' %>
-	      </div>
-      	<%= render :partial => '/layouts/copyright' %>
+  			<%= render :partial => '/layouts/contacts' %>
 	    </div>
 	</div>
+	<%= render :partial => '/layouts/copyright' %>
 <% end -%>

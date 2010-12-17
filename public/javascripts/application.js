@@ -11,6 +11,17 @@ $(document).ready(function(){
 		perspective: 50 // perpective height
 	});
 	
-	$("#tabs").tabs().toggleClass('invisible');
+	$("#tabs").tabs({
+	  show: function(event, ui) {
+	    var colors = {
+	      'my_sites': '#D0E7FF',
+	      'prices': '#F3D3FA',
+	      'contacts': '#CDFED3',
+	      };
+      
+	    var panel_id = $(ui.panel).attr('id');
+	    $('body').css('background-color', colors[panel_id])
+	  }
+  }).toggleClass('invisible');
 	
 });
