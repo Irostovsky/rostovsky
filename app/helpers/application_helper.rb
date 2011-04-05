@@ -24,4 +24,13 @@ module ApplicationHelper
   def textilize text
     RedCloth.new(text).to_html
   end
+  
+  def top_menu_data
+    [
+      {:name => :sites, :path => root_path, :title => 'Портфолио'},
+      {:name => :services, :path => "#", :title => 'Услуги'},
+      {:name => :contacts, :path => "#", :title => 'Контакты'}
+    ]
+  end
+  
 end

@@ -1,12 +1,17 @@
 body { 
-	background-color: #fff; color: #333; 
+	color: #333; 
 	margin: 0;
 	padding:0;
+  background: url(/images/top_shadow.png) top repeat-x;
+  font-family: Microsoft Sans Serif;
 }
 
 body, p, ol, ul, td {
-  font-family: Microsoft Sans Serif;
   font-size: 1em;
+}
+
+.clear{
+  clear: both;
 }
 
 pre {
@@ -71,9 +76,6 @@ a {
   float: left;
 }
 
-.header, #tabs {
-  background-color: #fff;
-}
 
 .notice{
 	background-color: #B3EC7A;
@@ -131,39 +133,94 @@ a.loading {
 	background: #fff url(images/ajax_small.gif) no-repeat center;
 }
 /***************************public design****************************************/
+.public_content{
+  min-width: 924px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  
+}
+
+.header {
+  border-bottom: 3px solid #E0E0E0;
+  padding-bottom: 20px;
+}
+
+.header .logo_wrapper{
+  margin-top: 45px;
+}
+
+.header .top_menu{
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: bottom;
+  margin-left: 8%;
+}
+
+.header .top_menu .menu_item{
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  border-left: 2px solid #EEF0F2;
+}
+
+.header .top_menu .menu_item:first-child{
+  border: none;
+}
+
+.header .top_menu .menu_item a{
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #4B4B4B;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-bottom: 20px;
+}
+
+.header .top_menu .menu_item a:hover{
+  color: #333;
+  border-bottom: 3px solid #333;
+}
+
+.header .top_menu .current a,
+.header .top_menu .current a:hover{
+  color: #0067B1;
+  border-bottom: 3px solid #0067B1;
+}
+
 .logo {
-	background-image: url(/images/logo-new-year.png);
-/*  background-image: url(/images/logo.png);*/
-	width: 290px;
-	height: 165px;
-	margin: 30px 50px;
-	margin-bottom: 10px;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00A1FF;
 }
 
-.slogan {
-	background-image: url(/images/cubes.png);
-	width: 734px;
-	height: 102px;
-	float: right;
+.header > div{
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
 }
 
-.slogan .text{
-	width: 300px;
-	font-size: 25px;
-	font-weight: bold;
-	margin-top: 2em;
-	line-height: 34px;
+.header .contacts{
+  margin-top: 10px;
+  float:right;
+/*  font-weight: bold;*/
 }
 
-.slogan .text img{
-	margin-left: 13em;
-	margin-top: 1ex;
+.header .contacts .phone{
+  background: url(/images/phone.png) no-repeat;
+  height: 35px;
+  padding-top: 10px;
+  padding-left: 53px;
 }
 
-
-body{
-	min-width: 1124px;
-	font-family: Microsoft Sans Serif;
+.header .contacts .email{
+  background: url(/images/email.png) no-repeat;
+  height: 47px;
+  padding-top: 10px;
+  padding-left: 56px;
 }
 
 .footer{
@@ -268,19 +325,3 @@ body{
   font-weight: normal;
 }
 
-/************************contacts**************************/
-#contacts .phone{
-  background: url(/images/phone.png) no-repeat;
-  height: 95px;
-  font-size: 1.5em;
-  padding-left: 90px;
-  padding-top: 29px;
-}
-
-#contacts .email{
-  background: url(/images/email.png) no-repeat;
-  height: 67px;
-  font-size: 1.5em;
-  padding-left: 90px;
-  padding-top: 21px;
-}

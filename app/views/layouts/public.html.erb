@@ -1,31 +1,24 @@
 <% inside_layout 'application' do -%>
-  <div class = 'header'>
-  	<% single_line_container do %>
-  		<%= link_to '', root_path, :class => 'logo' %>
-  		<% content_tag :div, :class => 'slogan' do %>
-  			<% content_tag :div, :class => 'text'  do %>
-  				<%= content_tag :div, "Создай&nbsp;свой&nbsp;мир&nbsp;- просто&nbsp;чуточку&nbsp;побудь&nbsp;богом..." %>
-  				<%= image_tag 'signature.png' %>
-  			<% end -%>
-  		<% end -%>
-  	<% end -%>
+  <div class='public_content'>
+    
+    <div class='header'>
+      <div class='logo_wrapper'>
+      	<%= link_to 'ROSTOVSKY', root_path, :class => 'logo' %>
+      	<div class='slogan'>Создай свой мир...</div>
+      </div>
+      <div class="top_menu">
+        <% top_menu_data.each do |item| %>
+          <div class="menu_item <%= "current" if item[:name] == @page %>">
+            <%= link_to item[:title], item[:path] %>
+          </div>
+        <% end -%>
+      </div>
+      <div class='contacts'>
+        <%= render '/layouts/contacts' %>
+      </div>
+    </div>
+	  <div class='clear'></div>
+  	<%= yield %>
+  	<%= render :partial => '/layouts/copyright' %>
   </div>
-	
-	<div id="tabs" class='invisible'>
-	    <ul>
-	        <li class='my_sites'><a href="#my_sites"><span>Мои работы</span></a></li>
-	        <li class='prices'><a href="#prices"><span>Услуги и цены</span></a></li>
-	        <li class='contacts'><a href="#contacts"><span>Контакты</span></a></li>
-	    </ul>
-	    <div id="my_sites">
-		    <%= yield %>
-	    </div>
-	    <div id="prices">
-  			<%= render :partial => '/layouts/prices' %>
-	    </div>
-	    <div id="contacts">
-  			<%= render :partial => '/layouts/contacts' %>
-	    </div>
-	</div>
-	<%= render :partial => '/layouts/copyright' %>
 <% end -%>

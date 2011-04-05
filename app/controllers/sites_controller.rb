@@ -1,7 +1,9 @@
 class SitesController < ApplicationController
   
   layout 'public'
-
+  
+  before_filter :set_page
+  
   def index
     @sites = Site.active.with_photos.sorted_by_position
   end
@@ -11,5 +13,10 @@ class SitesController < ApplicationController
     @photos = @site.photos.sorted_for_gallery
   end
   
+  private
+  
+  def set_page
+    @page = :sites
+  end
 
 end
