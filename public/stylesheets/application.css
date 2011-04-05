@@ -10,6 +10,10 @@ body, p, ol, ul, td {
   font-size: 1em;
 }
 
+h2{
+  color: #50852C;
+}
+
 .clear{
   clear: both;
 }
@@ -108,15 +112,25 @@ a {
 
 .public_sites .public_site a{
   display: block;
-  font-size: 1.5em
+  font-size: 1.3em;
+  text-decoration: none;
 }
 
-.public_sites .public_site div{
-  font-size: 1.2em
+.public_sites .public_site a:hover{
+  text-decoration: underline;
 }
 
 .public_sites .public_site .site_main_photo{
   margin-top: 0.8em;
+}
+
+.public_sites .public_site .site_main_photo img{
+  border: none;
+  
+}
+
+.public_sites .public_site .site_main_photo:hover img{
+  outline: 1px solid #4B4B4B;
 }
 
 .site_gallery {
