@@ -98,10 +98,6 @@ a {
 	width: 700px;
 }
 
-.public_sites{
-  text-align: center;
-}
-
 .public_sites .public_site{
 	display: inline-block;
 	margin-top: 1 em;
@@ -136,11 +132,11 @@ a {
 .site_gallery {
 	width: 60%;
 	height: 420px;
-	margin: 2em 2em 1em 1em;
+	margin: 0 2em 1em 1em;
 }
 
 .site_gallery img {
-	border: 2px solid #52697E;
+	border: 1px solid #52697E;
 }
 
 a.loading {
