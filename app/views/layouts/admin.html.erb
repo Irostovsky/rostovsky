@@ -1,6 +1,7 @@
 <% inside_layout 'application' do -%>
 	<%= locale_switcher %>
 	
+	<%= link_to "Messages", admin_messages_path %>
 	<%= link_to t(:sites), admin_sites_path %>
 	<%= link_to t(:logout), destroy_user_session_path if current_user %>
 

@@ -1,0 +1,7 @@
+<% semantic_form_for(@message, :url => admin_message_path(@message.code), :html => {:method => :put}) do |f| %>
+  <%= f.error_messages %>
+	<% f.inputs :title => 'Edit Message' do %>
+		<%= f.input :body %>
+		<%= f.buttons %>
+	<% end -%>
+<% end %>

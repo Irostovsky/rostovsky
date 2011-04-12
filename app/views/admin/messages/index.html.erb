@@ -1,0 +1,21 @@
+<h2>Messages</h2>
+<table border=1>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Body</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @messages.each do |msg| %>
+      <tr>
+        <td><%= msg.code %></td>
+        <td><%= msg.body %></td>
+        <td>
+          <%= link_to 'Edit', edit_admin_message_path(msg.code) %>
+        </td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
