@@ -1,0 +1,10 @@
+<% semantic_form_for([:admin, @page]) do |f| %>
+  <%= f.error_messages %>
+	<% f.inputs :title => 'Add/Edit Page' do %>
+		<%= f.input :code %>
+		<%= f.input :title %>
+		<%= f.input :content %>
+		<%= f.input :visible %>
+		<%= f.buttons %>
+	<% end -%>
+<% end %>
