@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :sites, :only => [:index, :show]
   map.resources :locales, :only => :update
+  map.page 'pages/:code', :controller => 'pages', :action => 'show'
+  
   
   map.devise_for :users
   
