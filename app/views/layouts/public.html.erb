@@ -8,7 +8,7 @@
       </div>
       <div class="top_menu">
         <% top_menu_data.each do |item| %>
-          <div class="menu_item <%= "current" if item[:name] == @page %>">
+          <div class="menu_item <%= "current" if item[:name] == @page_name %>">
             <%= link_to item[:title], item[:path] %>
           </div>
         <% end -%>

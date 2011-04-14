@@ -16,7 +16,7 @@ class SitesController < ApplicationController
   private
   
   def set_page
-    @page = :sites
+    @page_name = :sites
   end
 
 end

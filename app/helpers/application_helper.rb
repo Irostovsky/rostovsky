@@ -27,10 +27,9 @@ module ApplicationHelper
   
   def top_menu_data
     [
-      {:name => :sites, :path => root_path, :title => 'Портфолио'},
-      {:name => :services, :path => "#", :title => 'Услуги'},
-      {:name => :contacts, :path => "#", :title => 'Контакты'}
-    ]
+      {:name => :sites, :path => root_path, :title => 'Портфолио'}
+    ] + 
+    Page.visible.sorted_by_position.map{|p| {:name => p.code, :path => page_path(p.code), :title => p.title}}
   end
   
 end
