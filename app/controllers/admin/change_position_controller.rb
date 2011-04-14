@@ -3,14 +3,19 @@ class Admin::ChangePositionController < ApplicationController
   before_filter :authenticate_user!
   
   def update
-    site = Site.find(params[:site_id])
+    obj = Site.find_by_id(params[:site_id]) || Page.find_by_id(params[:page_id])
     if params[:id] == 'up'
-      site.move_higher
+      obj.move_higher
     else
-      site.move_lower
+      obj.move_lower
     end
-
-    redirect_to(admin_sites_path, :notice => 'Site position was successfully changed.')
+    
+    case obj.class.name
+    when "Site"
+      redirect_to admin_sites_path, :notice => 'Site position was successfully changed.'
+    when "Page"
+      redirect_to admin_pages_path, :notice => 'Page position was successfully changed.'
+    end
   end
   
 end
