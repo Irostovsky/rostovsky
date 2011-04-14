@@ -17,3 +17,4 @@ config.action_controller.perform_caching             = false
 config.action_mailer.raise_delivery_errors = false
 
 S3_ROOT_FOLDER = 'local'
+DOMAIN = 'localhost:3000'
