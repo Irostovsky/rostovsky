@@ -28,3 +28,4 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 DOMAIN = 'rostovsky.com.ua'
+config.logger = ActiveSupport::BufferedLogger.new(Rails.root.join("log","production.log"))
